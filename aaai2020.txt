@@ -1,0 +1,72 @@
+1. Robust Federated Learning via Collaborative Machine Teaching.
+https://aaai.org/ojs/index.php/AAAI/article/view/5826
+
+
+Abstract
+For federated learning systems deployed in the wild, data flaws hosted on local agents are widely witnessed. On one hand, given a large amount (e.g. over 60%) of training data are corrupted by systematic sensor noise and environmental perturbations, the performances of federated model training can be degraded significantly. On the other hand, it is prohibitively expensive for either clients or service providers to set up manual sanitary checks to verify the quality of data instances. In our study, we echo this challenge by proposing a collaborative and privacy-preserving machine teaching method. Specifically, we use a few trusted instances provided by teachers as benign examples in the teaching process. Our collaborative teaching approach seeks jointly the optimal tuning on the distributed training set, such that the model learned from the tuned training set predicts labels of the trusted items correctly. The proposed method couples the process of teaching and learning and thus produces directly a robust prediction model despite the extremely pervasive systematic data corruption. The experimental study on real benchmark data sets demonstrates the validity of our method.
+
+
+
+摘要
+对于部署在野外的联邦学习系统，本地代理上的数据缺陷是普遍存在的。一方面，由于大量(超过60%)的训练数据受到系统传感器噪声和环境扰动的破坏，联邦模型训练的性能会显著下降;另一方面，对于客户或服务提供商来说，建立手动卫生检查来验证数据实例的质量是非常昂贵的。在我们的研究中，我们通过提出一种协作和隐私保护的机器教学方法来回应这一挑战。具体来说，我们使用教师提供的几个可信实例作为教学过程中的良性实例。我们的协作教学方法共同寻求对分布式训练集的最优调整，这样从调整后的训练集学习的模型可以正确预测可信项目的标签。该方法将教与学的过程结合起来，直接生成了一个鲁棒的预测模型。在实际基准数据集上的实验研究证明了该方法的有效性。
+
+2. Practical Federated Gradient Boosting Decision Trees.
+https://aaai.org/ojs/index.php/AAAI/article/view/5895
+
+
+Abstract
+Gradient Boosting Decision Trees (GBDTs) have become very successful in recent years, with many awards in machine learning and data mining competitions. There have been several recent studies on how to train GBDTs in the federated learning setting. In this paper, we focus on horizontal federated learning, where data samples with the same features are distributed among multiple parties. However, existing studies are not efficient or effective enough for practical use. They suffer either from the inefficiency due to the usage of costly data transformations such as secure sharing and homomorphic encryption, or from the low model accuracy due to differential privacy designs. In this paper, we study a practical federated environment with relaxed privacy constraints. In this environment, a dishonest party might obtain some information about the other parties' data, but it is still impossible for the dishonest party to derive the actual raw data of other parties. Specifically, each party boosts a number of trees by exploiting similarity information based on locality-sensitive hashing. We prove that our framework is secure without exposing the original record to other parties, while the computation overhead in the training process is kept low. Our experimental studies show that, compared with normal training with the local data of each party, our approach can significantly improve the predictive accuracy, and achieve comparable accuracy to the original GBDT with the data from all parties.
+
+
+
+摘要
+梯度推进决策树(GBDTs)近年来非常成功，在机器学习和数据挖掘比赛中获得了许多奖项。关于如何在联邦学习环境下对gbdt进行培训，最近有一些研究。在本文中，我们关注的是水平联邦学习，即具有相同特征的数据样本分布在多个参与方之间。然而，现有的研究还不够有效，不能用于实际应用。它们要么由于使用昂贵的数据转换(如安全共享和同态加密)而效率低下，要么由于不同的隐私设计而模型精度低。本文研究了一种具有宽松隐私约束的实用联邦环境。在这种环境中，不诚实的一方可能会获得有关其他方数据的一些信息，但不诚实的一方仍然不可能获得其他方的实际原始数据。具体来说，每一方通过利用基于位置敏感哈希的相似性信息来增加树的数量。在不将原始记录暴露给其他方的情况下，我们证明了我们的框架是安全的，同时训练过程中的计算开销保持在较低的水平。我们的实验研究表明，与使用各方局部数据的正常训练相比，我们的方法可以显著提高预测精度，达到与使用各方数据的原始GBDT相当的精度。
+
+3. Federated Latent Dirichlet Allocation: A Local Differential Privacy Based Framework.
+https://aaai.org/ojs/index.php/AAAI/article/view/6096
+
+
+Abstract
+Latent Dirichlet Allocation (LDA) is a widely adopted topic model for industrial-grade text mining applications. However, its performance heavily relies on the collection of large amount of text data from users' everyday life for model training. Such data collection risks severe privacy leakage if the data collector is untrustworthy. To protect text data privacy while allowing accurate model training, we investigate federated learning of LDA models. That is, the model is collaboratively trained between an untrustworthy data collector and multiple users, where raw text data of each user are stored locally and not uploaded to the data collector. To this end, we propose FedLDA, a local differential privacy (LDP) based framework for federated learning of LDA models. Central in FedLDA is a novel LDP mechanism called Random Response with Priori (RRP), which provides theoretical guarantees on both data privacy and model accuracy. We also design techniques to reduce the communication cost between the data collector and the users during model training. Extensive experiments on three open datasets verified the effectiveness of our solution.
+
+
+
+摘要
+Latent Dirichlet Allocation (LDA)是一种广泛应用于工业级文本挖掘应用的主题模型。但其性能很大程度上依赖于从用户日常生活中收集大量文本数据进行模型训练。如果数据收集器是不可信的，这样的数据收集可能会导致严重的隐私泄露。为了保护文本数据隐私，同时允许精确的模型训练，我们研究了LDA模型的联合学习。也就是说，模型在一个不可信的数据收集器和多个用户之间进行协作训练，其中每个用户的原始文本数据存储在本地，而不是上传到数据收集器。为此，我们提出了一种基于局部差异隐私(LDP)的LDA联合学习框架。FedLDA的核心是一种新的LDP机制，称为随机响应先验(Random Response with Priori, RRP)，它为数据的隐私性和模型的准确性提供了理论保障。我们还设计了一些技术来降低模型训练过程中数据收集器和用户之间的通信成本。在三个开放数据集上的大量实验验证了我们的解决方案的有效性。
+
+4. Federated Patient Hashing.
+https://aaai.org/ojs/index.php/AAAI/article/view/6121
+
+
+Abstract
+Privacy concerns on sharing sensitive data across institutions are particularly paramount for the medical domain, which hinders the research and development of many applications, such as cohort construction for cross-institution observational studies and disease surveillance. Not only that, the large volume and heterogeneity of the patient data pose great challenges for retrieval and analysis. To address these challenges, in this paper, we propose a Federated Patient Hashing (FPH) framework, which collaboratively trains a retrieval model stored in a shared memory while keeping all the patient-level information in local institutions. Specifically, the objective function is constructed by minimization of a similarity preserving loss and a heterogeneity digging loss, which preserves both inter-data and intra-data relationships. Then, by leveraging the concept of Bregman divergence, we implement optimization in a federated manner in both centralized and decentralized learning settings, without accessing the raw training data across institutions. In addition to this, we also analyze the convergence rate of the FPH framework. Extensive experiments on real-world clinical data set from critical care are provided to demonstrate the effectiveness of the proposed method on similar patient matching across institutions.
+
+
+
+摘要
+在医疗领域，机构间共享敏感数据的隐私问题尤其重要，这妨碍了许多应用程序的研究和开发，例如跨机构观察性研究和疾病监测的队列建设。不仅如此，患者数据的大容量和异质性给检索和分析带来了巨大的挑战。为了解决这些挑战，在本文中，我们提出了一个联邦患者哈希(FPH)框架，该框架协作训练一个存储在共享内存中的检索模型，同时将所有患者级别的信息保存在本地机构中。具体来说，目标函数通过最小化相似保留损失和异质性挖掘损失来构建，同时保留了数据间和数据内的关系。然后，通过利用Bregman发散的概念，我们在集中和分散的学习设置中以联合方式实现优化，而不需要访问机构间的原始培训数据。除此之外，我们还分析了FPH框架的收敛速度。在重症监护的真实临床数据集上进行了大量的实验，以证明所提出的方法在跨机构的相似患者匹配上的有效性。
+
+5. Federated Learning for Vision-and-Language Grounding Problems.
+https://aaai.org/ojs/index.php/AAAI/article/view/6824
+
+
+Abstract
+Recently, vision-and-language grounding problems, e.g., image captioning and visual question answering (VQA), has attracted extensive interests from both academic and industrial worlds. However, given the similarity of these tasks, the efforts to obtain better results by combining the merits of their algorithms are not well studied. Inspired by the recent success of federated learning, we propose a federated learning framework to obtain various types of image representations from different tasks, which are then fused together to form fine-grained image representations. The representations merge useful features from different vision-and-language grounding problems, and are thus much more powerful than the original representations alone in individual tasks. To learn such image representations, we propose the Aligning, Integrating and Mapping Network (aimNet). The aimNet is validated on three federated learning settings, which include horizontal federated learning, vertical federated learning, and federated transfer learning. Experiments of aimNet-based federated learning framework on two representative tasks, i.e., image captioning and VQA, demonstrate the effective and universal improvements of all metrics over the baselines. In image captioning, we are able to get 14% and 13% relative gain on the task-specific metrics CIDEr and SPICE, respectively. In VQA, we could also boost the performance of strong baselines by up to 3%.
+
+
+
+摘要
+近年来，视觉和语言基础问题，如图像字幕和视觉问答(VQA)，引起了学术界和工业界的广泛关注。但是，由于这些任务的相似性，如何结合各自算法的优点来获得更好的结果还没有得到很好的研究。受最近成功的联邦学习的启发，我们提出了一个联邦学习框架，从不同的任务中获得各种类型的图像表示，然后融合在一起形成细粒度的图像表示。这些表示融合了来自不同视觉和语言基础问题的有用特征，因此在单个任务中比原始表示要强大得多。为了学习这样的图像表示，我们提出了对齐、集成和映射网络(aimNet)。aimNet在三个联邦学习设置上进行了验证，这三个联邦学习设置包括水平联邦学习、垂直联邦学习和联邦迁移学习。基于目标网络的联合学习框架在图像字幕和VQA两个具有代表性的任务上的实验表明，所有指标在基线上都得到了有效和普遍的改进。在图像字幕中，我们能够在特定于任务的度量CIDEr和SPICE上分别获得14%和13%的相对增益。在VQA中，我们还可以将强大基线的性能提高3%。
+
+6. FedVision: An Online Visual Object Detection Platform Powered by Federated Learning.
+https://aaai.org/ojs/index.php/AAAI/article/view/7021
+
+
+Abstract
+Visual object detection is a computer vision-based artificial intelligence (AI) technique which has many practical applications (e.g., fire hazard monitoring). However, due to privacy concerns and the high cost of transmitting video data, it is highly challenging to build object detection models on centrally stored large training datasets following the current approach. Federated learning (FL) is a promising approach to resolve this challenge. Nevertheless, there currently lacks an easy to use tool to enable computer vision application developers who are not experts in federated learning to conveniently leverage this technology and apply it in their systems. In this paper, we report FedVision - a machine learning engineering platform to support the development of federated learning powered computer vision applications. The platform has been deployed through a collaboration between WeBank and Extreme Vision to help customers develop computer vision-based safety monitoring solutions in smart city applications. Over four months of usage, it has achieved significant efficiency improvement and cost reduction while removing the need to transmit sensitive data for three major corporate customers. To the best of our knowledge, this is the first real application of FL in computer vision-based tasks.
+
+
+
+摘要
+视觉目标检测是一种基于计算机视觉的人工智能(AI)技术，具有许多实际应用(如火灾监测)。然而，由于隐私问题和传输视频数据的高成本，采用现有方法在集中存储的大型训练数据集上建立目标检测模型具有很高的挑战性。联合学习(FL)是解决这一挑战的一种很有前途的方法。然而，目前缺乏一种易于使用的工具，使非联合学习专家的计算机视觉应用程序开发人员能够方便地利用这项技术并将其应用到他们的系统中。在本文中，我们报告了FedVision——一个支持联邦学习驱动的计算机视觉应用程序开发的机器学习工程平台。该平台由微众银行和极视科技合作部署，帮助客户开发基于计算机视觉的智能城市安全监控解决方案。在4个月的使用中，它已经取得了显著的效率提高和成本降低，同时消除了三个主要企业客户传输敏感数据的需要。据我们所知，这是FL第一次真正应用于基于计算机视觉的任务。
+

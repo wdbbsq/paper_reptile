@@ -1,0 +1,33 @@
+1. Analyzing Federated Learning through an Adversarial Lens.
+http://proceedings.mlr.press/v97/bhagoji19a.html
+
+
+    Federated learning distributes model training among a multitude of agents, who, guided by privacy concerns, perform training using their local data but share only model parameter updates, for iterative aggregation at the server to train an overall global model. In this work, we explore how the federated learning setting gives rise to a new threat, namely model poisoning, which differs from traditional data poisoning. Model poisoning is carried out by an adversary controlling a small number of malicious agents (usually 1) with the aim of causing the global model to misclassify a set of chosen inputs with high conﬁdence. We explore a number of strategies to carry out this attack on deep neural networks, starting with targeted model poisoning using a simple boosting of the malicious agent’s update to overcome the effects of other agents. We also propose two critical notions of stealth to detect malicious updates. We bypass these by including them in the adversarial objective to carry out stealthy model poisoning. We improve its stealth with the use of an alternating minimization strategy which alternately optimizes for stealth and the adversarial objective. We also empirically demonstrate that Byzantine-resilient aggregation strategies are not robust to our attacks. Our results indicate that highly constrained adversaries can carry out model poisoning attacks while maintaining stealth, thus highlighting the vulnerability of the federated learning setting and the need to develop effective defense strategies.
+  
+
+
+联邦学习将模型训练分配给众多的代理，这些代理出于隐私考虑，使用本地数据执行训练，但只共享模型参数更新，以便在服务器上进行迭代聚合，以训练一个整体的全局模型。在这项工作中，我们探讨了联合学习设置是如何引起一个新的威胁，即模型中毒，这是不同于传统的数据中毒。模型中毒是由控制少量恶意代理(通常为1)的对手实施的，目的是导致全局模型对一组选择的高可信度输入进行错误分类。我们探索了许多在深度神经网络上进行这种攻击的策略，首先使用一个简单的增强恶意代理的更新来克服其他代理的影响的目标模型中毒。我们还提出了两个关键的秘密概念，以检测恶意更新。我们绕过这些，把它们包括在对抗目标中，以进行隐形模型中毒。我们使用交替最小化策略来提高它的潜行性，交替优化潜行和对抗目标。我们还通过经验证明了拜占庭弹性聚合策略对我们的攻击并不健壮。我们的结果表明，高度受限的对手可以在保持隐身的情况下进行模型中毒攻击，从而突出了联邦学习设置的脆弱性和开发有效防御策略的必要性。
+
+
+2. Agnostic Federated Learning.
+http://proceedings.mlr.press/v97/mohri19a.html
+
+
+    A key learning scenario in large-scale applications is that of federated learning, where a centralized model is trained based on data originating from a large number of clients. We argue that, with the existing training and inference, federated models can be biased towards different clients. Instead, we propose a new framework of agnostic federated learning, where the centralized model is optimized for any target distribution formed by a mixture of the client distributions. We further show that this framework naturally yields a notion of fairness. We present data-dependent Rademacher complexity guarantees for learning with this objective, which guide the definition of an algorithm for agnostic federated learning. We also give a fast stochastic optimization algorithm for solving the corresponding optimization problem, for which we prove convergence bounds, assuming a convex loss function and a convex hypothesis set. We further empirically demonstrate the benefits of our approach in several datasets. Beyond federated learning, our framework and algorithm can be of interest to other learning scenarios such as cloud computing, domain adaptation, drifting, and other contexts where the training and test distributions do not coincide.
+  
+
+
+在大规模应用程序中，一个关键的学习场景是联合学习，在联合学习中，一个集中的模型是基于来自大量客户机的数据进行训练的。我们认为，利用现有的训练和推理，联邦模型可能会偏向于不同的客户端。相反，我们提出了一种新的不可知联邦学习框架，其中集中的模型针对由客户端分布混合形成的任何目标分布进行了优化。我们进一步表明，这个框架自然产生了公平的概念。我们提出了基于数据依赖的Rademacher复杂度保证来实现这一目标，从而指导了不可知论联邦学习算法的定义。在给定凸损失函数和凸假设集的前提下，给出了求解相应优化问题的快速随机优化算法，并证明了算法的收敛界。我们在几个数据集中进一步实证地证明了我们的方法的好处。除了联合学习之外，我们的框架和算法还可以用于其他学习场景，如云计算、领域适应、漂移以及其他训练和测试分布不一致的上下文。
+
+
+3. Bayesian Nonparametric Federated Learning of Neural Networks.
+http://proceedings.mlr.press/v97/yurochkin19a.html
+
+
+    In federated learning problems, data is scattered across different servers and exchanging or pooling it is often impractical or prohibited. We develop a Bayesian nonparametric framework for federated learning with neural networks. Each data server is assumed to provide local neural network weights, which are modeled through our framework. We then develop an inference approach that allows us to synthesize a more expressive global network without additional supervision, data pooling and with as few as a single communication round. We then demonstrate the efficacy of our approach on federated learning problems simulated from two popular image classification datasets.
+  
+
+
+在联合学习问题中，数据分散在不同的服务器上，交换或共用数据通常是不切实际的，或者是被禁止的。我们开发了一个神经网络联合学习的贝叶斯非参数框架。假设每个数据服务器都提供局部神经网络权值，这些权值通过我们的框架建模。然后，我们开发了一种推理方法，允许我们在没有额外的监督、数据池和很少的一次交流的情况下，合成一个更具表现力的全球网络。然后，我们证明了我们的方法在两个流行的图像分类数据集模拟的联邦学习问题上的有效性。
+
+

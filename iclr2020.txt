@@ -1,0 +1,30 @@
+1. Federated Adversarial Domain Adaptation.
+https://openreview.net/forum?id=HJezF3VYPB
+
+Federated learning improves data privacy and efficiency in machine learning performed over networks of distributed devices, such as mobile phones, IoT and wearable devices, etc. Yet models trained with federated learning can still fail to generalize to new devices due to the problem of domain shift. Domain shift occurs when the labeled data collected by source nodes statistically differs from the target node's unlabeled data. In this work, we present a principled approach to the problem of federated domain adaptation, which aims to align the representations learned among the different nodes with the data distribution of the target node. Our approach extends adversarial adaptation techniques to the constraints of the federated setting. In addition, we devise a dynamic attention mechanism and leverage feature disentanglement to enhance knowledge transfer. Empirically, we perform extensive experiments on several image and text classification tasks and show promising results under unsupervised federated domain adaptation setting.
+
+联合学习提高了在分布式设备网络(如手机、物联网、可穿戴设备等)上进行机器学习的数据隐私性和效率。然而，由于领域转移的问题，使用联合学习训练的模型仍然不能推广到新设备。当源节点收集到的标记数据与目标节点的未标记数据在统计上存在差异时，就会发生域移位。在这项工作中，我们提出了一种有原则的方法来解决联合域适应问题，其目的是将不同节点之间学习到的表示与目标节点的数据分布对齐。我们的方法将对抗性适应技术扩展到联邦设置的约束。此外，我们设计了一个动态注意机制，并利用特征解纠缠来增强知识转移。在实验中，我们对多个图像和文本分类任务进行了大量的实验，并在无监督联邦领域自适应设置下显示出了良好的结果。
+
+2. DBA: Distributed Backdoor Attacks against Federated Learning.
+https://openreview.net/forum?id=rkgyS0VFvr
+
+istributed learning methodology and inherently heterogeneous data distribution across parties may bring new vulnerabilities. In addition to recent centralized backdoor attacks on FL where each party embeds the same global trigger during training, we propose the distributed backdoor attack (DBA) --- a novel threat assessment framework developed by fully exploiting the distributed nature of FL. DBA decomposes a global trigger pattern into separate local patterns and embed them into the training set of different adversarial parties respectively. Compared to standard centralized backdoors, we show that DBA is substantially more persistent and stealthy against FL on diverse datasets such as finance and image data. We conduct extensive experiments to show that the attack success rate of DBA is significantly higher than centralized backdoors under different settings. Moreover, we find that distributed attacks are indeed more insidious, as DBA can evade two state-of-the-art robust FL algorithms against centralized backdoors. We also provide explanations for the effectiveness of DBA via feature visual interpretation and feature importance ranking.
+To further explore the properties of DBA, we test the attack performance by varying different trigger factors, including local trigger variations (size, gap, and location), scaling factor in FL, data distribution, and poison ratio and interval. Our proposed DBA and thorough evaluation results shed lights on characterizing the robustness of FL.
+
+分布式学习方法和固有的跨方异构数据分布可能带来新的漏洞。除了最近针对佛罗里达州的集中后门攻击，即双方在训练中植入相同的全局触发器，我们提出了分布式后门攻击(distributed backdoor attack, DBA)——一种充分利用FL的分布式特性开发的新型威胁评估框架，DBA将全局触发模式分解为单独的局部模式，并将它们分别嵌入到不同对手的训练集中。与标准的集中后门相比，我们发现DBA在金融和图像数据等不同数据集上对FL具有更持久和更隐蔽的能力。我们通过大量的实验表明，在不同的设置下，DBA的攻击成功率明显高于集中式后门。此外，我们发现分布式攻击确实更加阴险，因为DBA可以避开两种最先进的鲁棒FL算法来对抗集中式后门。我们还通过特征视觉解释和特征重要性排序来解释DBA的有效性。
+为了进一步探究DBA的特性，我们通过改变不同的触发因子来测试攻击性能，包括局部触发因子的变化(大小、间隙和位置)、FL中的缩放因子、数据分布、毒性比率和间隔。我们提出的DBA和全面的评估结果为描述FL的鲁棒性提供了依据。
+
+3. Fair Resource Allocation in Federated Learning.
+https://openreview.net/forum?id=ByexElSYDr
+
+Federated learning involves training statistical models in massive, heterogeneous networks. Naively minimizing an aggregate loss function in such a network may disproportionately advantage or disadvantage some of the devices. In this work, we propose q-Fair Federated Learning (q-FFL), a novel optimization objective inspired by fair resource allocation in wireless networks that encourages a more fair (specifically, a more uniform) accuracy distribution across devices in federated networks. To solve q-FFL, we devise a communication-efficient method, q-FedAvg, that is suited to federated networks. We validate both the effectiveness of q-FFL and the efficiency of q-FedAvg on a suite of federated datasets with both convex and non-convex models, and show that q-FFL (along with q-FedAvg) outperforms existing baselines in terms of the resulting fairness, flexibility, and efficiency.
+
+联合学习涉及到在大规模异构网络中训练统计模型。在这样的网络中，天真地最小化总损耗功能可能会不成比例地对某些设备有利或不利。在这项工作中，我们提出了q-公平联邦学习(q-FFL)，这是一个新的优化目标，它是受无线网络中公平资源分配的启发，鼓励联邦网络中设备之间更公平(具体来说，更统一)的精度分配。为了解决q-FFL，我们设计了一种通信效率高的方法，q-FedAvg，它适用于联邦网络。我们在一组凸模型和非凸模型的联邦数据集上验证了q-FFL的有效性和q-FedAvg的效率，并表明q-FFL(以及q-FedAvg)在公平性、灵活性和效率方面优于现有的基线。
+
+4. Federated Learning with Matched Averaging.
+https://openreview.net/forum?id=BkluqlSFDS
+
+Federated learning allows edge devices to collaboratively learn a shared model while keeping the training data on device, decoupling the ability to do model training from the need to store the data in the cloud. We propose Federated matched averaging (FedMA) algorithm designed for federated learning of modern neural network architectures e.g. convolutional neural networks (CNNs) and LSTMs. FedMA constructs the shared global model in a layer-wise manner by matching and averaging hidden elements (i.e. channels for convolution layers; hidden states for LSTM; neurons for fully connected layers) with similar feature extraction signatures. Our experiments indicate that FedMA not only outperforms popular state-of-the-art federated learning algorithms on deep CNN and LSTM architectures trained on real world datasets, but also reduces the overall communication burden.
+
+联合学习允许边缘设备在将训练数据保存在设备上的同时协作学习一个共享模型，将模型训练的能力与将数据存储在云中的需求分离开来。我们提出联邦匹配平均(FedMA)算法，用于现代神经网络体系结构的联邦学习，如卷积神经网络(cnn)和lstm。FedMA通过匹配和平均隐藏元素(即卷积层的通道;LSTM的隐藏状态;全连接层的神经元)具有相似的特征提取特征。我们的实验表明，FedMA不仅在深度CNN和LSTM架构上的性能优于目前流行的最先进的联邦学习算法，而且还减少了整体通信负担。
+
